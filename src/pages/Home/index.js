@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { shuffle } from 'lodash';
 import { Container, Header, Partner, Partners } from './styles';
 
 import BannerGrid from '../../components/BannerGrid';
 
-import partnersList from '../../services/partners';
+import partners from '../../services/partners';
 import banners from '../../services/banners';
 import Button from '../../components/Button';
 
 export default function Home() {
-  const [partners, setPartners] = useState(partnersList);
-
   return (
     <>
       <Container>
@@ -31,12 +28,7 @@ export default function Home() {
           </Button>
         </Header>
         <BannerGrid banners={banners} />
-        <h2>
-          Apoiadores
-          <Button inline onClick={() => setPartners(shuffle(partnersList))}>
-            Randomizar
-          </Button>
-        </h2>
+        <h2>Apoiadores</h2>
         <Partners>
           {partners.map(partner => (
             <Partner key={partner.name}>

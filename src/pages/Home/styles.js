@@ -24,7 +24,7 @@ export const Header = styled.header`
   }
 `;
 
-export const Partners = styled.section`
+export const Partners = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -39,7 +39,7 @@ export const Partners = styled.section`
   }
 `;
 
-export const Partner = styled.div`
+export const Partner = styled.li`
   width: 13%;
   background: #1b1a1f;
   height: 10rem;

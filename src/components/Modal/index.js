@@ -57,8 +57,8 @@ export default function Modal({
 
   return (
     <FullScreen
+      open={Number(open)}
       success={!!success}
-      open={open ? 1 : 0}
       footerButtons={!!footerButtons}
     >
       <div ref={modal}>

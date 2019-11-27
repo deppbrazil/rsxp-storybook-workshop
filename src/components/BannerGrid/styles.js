@@ -11,6 +11,13 @@ export const Container = styled.section`
     max-width: 100%;
     max-height: 100%;
     overflow: hidden;
+    border: 2px solid transparent;
+    transition: 180ms ease-in-out;
+
+    :hover {
+      border-color: #7159c1;
+      transform: scale(1.015) !important;
+    }
 
     img {
       display: block;
